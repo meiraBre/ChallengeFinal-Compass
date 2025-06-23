@@ -1,0 +1,46 @@
+Relatório de preparação para o Challenge:
+
+🔎Entregas obrigatórias:
+Toda entrega deverá ser realizada no repositório GitHub, o qual deverá conter:
+- Documentos gerados durante a fase de análise;
+- Documentação geral do projeto no README e/ou Wiki;
+- Instruções claras de execução no README, incluindo pré-requisitos;
+- Código-fonte da automação de testes (back e front-end);
+- Lista de issues abertas com bugs ou melhorias encontradas durante os testes.
+
+🔎Critérios de Avaliação
+1. Planejamento e Análise de Testes
+- Qualidade e abrangência dos cenários criados;
+- Nível de cobertura da automação (APIs e fluxos da interface);
+- Utilização de mapas mentais;
+- Registro e clareza das issues abertas.
+
+2. Código e Estrutura da Automação
+- Estrutura organizada do projeto;
+- Código limpo e reutilizável;
+- Aplicação de boas práticas (ex: PageObject, ServiceObject, AppActions);
+- Manipulação eficiente de dados e validações completas;
+- Implementação de cenários complexos e independentes;
+- Aplicação de padrões, pipelines, ou uso de GenAI como diferencial de inovação.
+
+3. Uso do Git e Repositório
+- Frequência e clareza nos commits;
+- Utilização adequada de branches;
+- Documentação no README/Wiki, com explicações técnicas e passo a passo;
+- Reconhecimento das contribuições de colegas quando houver colaboração.
+
+🔎Apresentação Final
+- Duração: 6 minutos de apresentação + tempo de perguntas do instrutor.
+- Foco: Explique com objetividade os pontos avaliativos (análise, cobertura, código, inovação).
+- Justifique decisões técnicas diferentes das práticas da trilha, se aplicável.
+- Deixe tudo pronto para execução durante a apresentação (ambiente, dependências, dados, etc).
+
+🔎Apresentação Pessoal 
+- Nome completo
+- Idade
+- Curso e semestre atual
+- Cidade onde mora
+- Cor dos olhos
+- Cor dos cabelos
+- Cor da pele
+- Tipo de roupa e cor usada no dia da apresentação

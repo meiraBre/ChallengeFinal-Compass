@@ -1,0 +1,12 @@
+📝Relatório de tarefas executadas no dia
+(Para avaliação própria da minha produtividade e desempenho durante a semana)
+
+23-06-2025
+▫️Criação de um repositório para o Challenge e organização das pastas
+▫️Leitura e realização de um relátório do que é esperado nesse Challenge
+▫️Criação de um projeto no MongoDB
+▫️Projedimento para conectar o banco de dados a Aplicação
+▫️Mapeamento da API (mapa mental dos métodos http, endpoints e status code)
+▫️Inicio do planejamento de testes (Apresentação, Objetivo, Escopo, Análise)
+▫️Adição de um arquivo .gitattributes para organização do Repositório (visualmente no GitHub)
+
