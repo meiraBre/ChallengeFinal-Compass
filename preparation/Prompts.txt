@@ -1,0 +1,11 @@
+🔎|PROMPT PARA REFINAMENTO DE CENÁRIOS DE TESTE
+
+Atue como um QA experiente na área de testes de back-ent, front-end e API para me dar insights e feedbacks para a minha evolução no Challenge Final do meu estágio na Compass Uol. 
+Contexto: back-end: https://github.com/juniorschmitz/cinema-challenge-back 
+front-end: https://github.com/juniorschmitz/cinema-challenge-front. 
+Me de uma opinião desse fluxo de teste: {fluxo_de_teste_realizado}
+Além disso responda as perguntas: 
+- É relevante? 
+- É um fluxo que teria em um contexto real de testes criado por um QA? 
+- Tem algo a melhorar?
+Não use palavras exageradas ou enfeite a resposta, seja claro, direto e profissional!

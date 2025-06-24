@@ -10,3 +10,8 @@
 ▫️Inicio do planejamento de testes (Apresentação, Objetivo, Escopo, Análise)
 ▫️Adição de um arquivo .gitattributes para organização do Repositório (visualmente no GitHub)
 
+24-06-2025
+▫️Teste exploratório pela API, front-end (como usuário visitante)
+▫️Tentativa de criar uma conta pelo front-end da aplicação para visualizar demais funcionalidades
+▫️Criação de 18 cenários de teste (abrangendo endpoints de autenticação, filmes e reservas)
+▫️Criação de um PROMPT para auxilio no refinamento de cenários de teste
