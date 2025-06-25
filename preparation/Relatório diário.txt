@@ -15,3 +15,9 @@
 ▫️Tentativa de criar uma conta pelo front-end da aplicação para visualizar demais funcionalidades
 ▫️Criação de 18 cenários de teste (abrangendo endpoints de autenticação, filmes e reservas)
 ▫️Criação de um PROMPT para auxilio no refinamento de cenários de teste
+
+25-06-2025
+▫️Realização de testes exploratórios por toda interface (front-end) da aplicação
+▫️Finalização dos cenários de teste (Apartir do cenário 18 foram criados mais 16 cenários, totalizando 34 cenários)
+▫️Finalização do Planejamento de teste (relatório dos testes exploratórios, descrição da cobertura de testes e testes candidatos a automação)
+
