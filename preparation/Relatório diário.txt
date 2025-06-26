@@ -24,3 +24,4 @@
 26-06-2025
 ▫️Refinamento do planejamento de testes
 ▫️Realização de todos testes manuais com os cenários de testes planejados (36 cenários) no Postman
+▫️Refinamento de testes candidatos a automação
