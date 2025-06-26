@@ -21,3 +21,6 @@
 ▫️Finalização dos cenários de teste (Apartir do cenário 18 foram criados mais 16 cenários, totalizando 34 cenários)
 ▫️Finalização do Planejamento de teste (relatório dos testes exploratórios, descrição da cobertura de testes e testes candidatos a automação)
 
+26-06-2025
+▫️Refinamento do planejamento de testes
+▫️Realização de todos testes manuais com os cenários de testes planejados (36 cenários) no Postman
