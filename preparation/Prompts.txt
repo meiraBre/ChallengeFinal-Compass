@@ -9,3 +9,5 @@ Além disso responda as perguntas:
 - É um fluxo que teria em um contexto real de testes criado por um QA? 
 - Tem algo a melhorar?
 Não use palavras exageradas ou enfeite a resposta, seja claro, direto e profissional!
+
+Atue como um auxiliar de QA e me auxilie a encontrar o erro dessa requisição. Contexto: (O que eu enviei) (O erro). Lembrando que não há parâmentros no swagger referente a esse endpoint.
