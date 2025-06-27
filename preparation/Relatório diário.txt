@@ -25,3 +25,10 @@
 ▫️Refinamento do planejamento de testes
 ▫️Realização de todos testes manuais com os cenários de testes planejados (36 cenários) no Postman
 ▫️Refinamento de testes candidatos a automação
+
+27-06-2025
+▫️Refinamento dos casos de teste (de acordo com a atualização da documentação do swagger)
+    - 47 cenários de testes (eram 36)
+▫️Refinamento do Planejamento de teste
+▫️Realização dos novos testes manuais
+▫️Reorganização dos fluxos de testes para automatização - Focando no objetivo de colocar em CI/code
