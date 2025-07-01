@@ -32,3 +32,9 @@
 ▫️Refinamento do Planejamento de teste
 ▫️Realização dos novos testes manuais
 ▫️Reorganização dos fluxos de testes para automatização - Focando no objetivo de colocar em CI/code
+
+30-06-2025
+▫️Organização das pastas e arquivos para automatização
+▫️Realização de alguns cenários de teste previstos para automatização
+▫️Boas práticas implementadas referente a integração de CI/code
+
