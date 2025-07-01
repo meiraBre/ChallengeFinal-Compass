@@ -32,3 +32,22 @@
 ▫️Refinamento do Planejamento de teste
 ▫️Realização dos novos testes manuais
 ▫️Reorganização dos fluxos de testes para automatização - Focando no objetivo de colocar em CI/code
+
+30-06-2025
+▫️Organização das pastas e arquivos para automatização
+▫️Realização de alguns cenários de teste previstos para automatização
+▫️Boas práticas implementadas referente a integração de CI/code
+
+01-07-2025
+▫️Realização dos testes automatizados que falatavam
+▫️Refinamento do planejamento de testes (melhoria da explicação de cobertura de testes)
+▫️Refinamento dos códigos para aproveitamento e reutilização como uma boa práticas
+
+Cheklist dia 02-07-2025
+▫️Realizar os testes automatizados de front-end
+▫️Fazer os reports de bugs no Jira
+▫️Rever os critérios de avaliação - learning
+▫️Acrescentar as novas informações dos endpoints no mapa mental
+▫️Fazer a implementação de CI/CD
+
+

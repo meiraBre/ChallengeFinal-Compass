@@ -10,4 +10,8 @@ Além disso responda as perguntas:
 - Tem algo a melhorar?
 Não use palavras exageradas ou enfeite a resposta, seja claro, direto e profissional!
 
+🔎|PROMPT PARA ENCONTRAR O ERRO DA REQUISIÇÃO 
 Atue como um auxiliar de QA e me auxilie a encontrar o erro dessa requisição. Contexto: (O que eu enviei) (O erro). Lembrando que não há parâmentros no swagger referente a esse endpoint.
+
+🔎|PROMPT PARA ME AJUDAR NA ESCOLHA DOS TESTES PARA AUTOMATIZAÇÃO COM FOCO EM INTEGRAÇÃO CI/CD
+Você, como ajudante de uma estagiária de QA, deve me auxiliar com dicas e orientações de como decidir os cenários para automatização de um projeto, sendo que o objetivo é a integração de CI/CD e não quero automatizar tudo. Tenho 4 dias para finalizar isso, e ainda tenho que fazer os testes automatizados de front-end dessa aplicação. Seja objetivo e profissional. Meus cenários de teste: 

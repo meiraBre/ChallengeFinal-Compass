@@ -1,0 +1,5 @@
+# Resultados de testes do Robot
+results/
+
+# Ambiente virtual
+.venv/
