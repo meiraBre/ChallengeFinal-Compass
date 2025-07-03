@@ -18,8 +18,18 @@ Cenário 13: Buscar reservas do próprio usuário
     Enviar Requisicao De Busca De Reservas
     Validar Resposta 200 Com Lista De Reservas
 
-Cenário 14: Criar reserva sem autenticação
-    [Tags]    reserva    post    nao-autenticado
-    Criar Corpo Da Reserva Sem Token
-    Enviar Requisicao De Reserva Sem Autenticacao
-    Validar Resposta 401 Sem Autorizacao
+Cenário 14: Usuário comum tenta deletar reserva
+    [Tags]    reserva    seguranca    forbidden
+    [Teardown]    Deletar Usuario Criado
+    
+    Criar E Autenticar Usuario Comum
+    Tentar Deletar Reserva Comum Com ID Fixo
+    Validar Falha Deletar Reserva Sem Permissão
+
+Cenário 15: Criar reserva sem assentos
+    [Tags]    reserva    validacao    negativo
+    [Teardown]    Deletar Usuario Criado
+    
+    Criar E Autenticar Usuario Comum
+    Tentar Criar Reserva Sem Assentos
+    Validar Erro Campo Obrigatório Assentos

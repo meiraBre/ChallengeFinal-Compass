@@ -1,11 +1,6 @@
 *** Settings ***
 Library    RequestsLibrary
 
-*** variables ***
-${ENDPOINT_RESERVAS}    /reservations/me
-${ID_SESSAO_VALIDO}=    6865ac675acb3c4ada24ab4f
-${ENDPOINT_RESERVA}      /api/v1/reservations
-
 *** Keywords ***
 Enviar Requisicao De Busca De Reservas
     Create Session    reserva    ${BASE_URL}
@@ -21,28 +16,25 @@ Validar Resposta 200 Com Lista De Reservas
     Should Be True    ${RESPOSTA_RESERVAS.json()['success']}
     Log    Total de reservas encontradas: ${RESPOSTA_RESERVAS.json()['count']}
 
-Criar Corpo Da Reserva Sem Token
-    ${assento1}=    Create Dictionary    row=D    number=1    type=full
-    ${assento2}=    Create Dictionary    row=D    number=2    type=half
-    ${seats}=       Create List    ${assento1}    ${assento2}
-    ${corpo}=       Create Dictionary
+Tentar Deletar Reserva Comum Com ID Fixo
+    ${reservation_id}=    Set Variable    685da09fd93340dcbb031357
+    ${headers}=    Create Dictionary    Authorization=${TOKEN_USUARIO}
+    Create Session    reserva    ${BASE_URL}
+    ${response}=    DELETE On Session    reserva    /reservations/${reservation_id}    headers=${headers}    expected_status=403
+    Set Test Variable    ${delete_response}    ${response}
+
+Validar Falha Deletar Reserva Sem Permissão
+    Should Be Equal As Integers    ${delete_response.status_code}    403
+    Should Contain    ${delete_response.text}    User role user is not authorized to access this route
+
+Tentar Criar Reserva Sem Assentos
+    ${body}=    Create Dictionary
     ...    session=${ID_SESSAO_VALIDO}
-    ...    paymentMethod=credit_card
-    ...    seats=${seats}
-    Set Test Variable    ${CORPO_RESERVA}    ${corpo}
+    Create Session    reserva    ${BASE_URL}
+    ${headers}=    Create Dictionary    Authorization=${TOKEN_USUARIO}
+    ${response}=    POST On Session    reserva    /reservations    headers=${headers}    json=${body}    expected_status=500
+    Set Test Variable    ${reserva_sem_assento_response}    ${response}
 
-Enviar Requisicao De Reserva Sem Autenticacao
-    Create Session    reserva_sem_token    ${BASE_URL}
-    ${resposta}=    POST On Session
-    ...    reserva_sem_token
-    ...    ${ENDPOINT_RESERVA}
-    ...    json=${CORPO_RESERVA}
-    Set Test Variable    ${RESPOSTA_RESERVA}    ${resposta}
-
-Validar Resposta 401 Sem Autorizacao
-    Should Be Equal As Integers    ${RESPOSTA_RESERVA.status_code}    401
-    Should Be True    "${RESPOSTA_RESERVA.json()['success']}" == "false"
-    Log    Mensagem recebida: ${RESPOSTA_RESERVA.json()['message']}
-
-
-
+Validar Erro Campo Obrigatório Assentos
+    Should Be Equal As Integers    ${reserva_sem_assento_response.status_code}    500
+    Should Contain    ${reserva_sem_assento_response.text}    seats is not iterable
