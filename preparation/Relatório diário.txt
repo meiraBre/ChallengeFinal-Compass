@@ -36,7 +36,7 @@
 30-06-2025
 ▫️Organização das pastas e arquivos para automatização
 ▫️Realização de alguns cenários de teste previstos para automatização
-▫️Boas práticas implementadas referente a integração de CI/code
+▫️Boas práticas implementadas referente a integração de CI/CD
 
 01-07-2025
 ▫️Realização dos testes automatizados que falatavam
@@ -49,5 +49,11 @@
 ▫️Rever os critérios de avaliação - learning
 ▫️Acrescentar as novas informações dos endpoints no mapa mental
 
+03-07-2025
+▫️Finalização das automatizações
+▫️Finalização das documentações
+▫️Tentativa de implementação do CI/CD
+▫️Ultimos reports de bugs
+▫️Preparação para apresentação
 
 
