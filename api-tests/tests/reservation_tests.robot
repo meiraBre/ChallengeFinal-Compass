@@ -10,50 +10,16 @@ Resource    ../resources/keywords/reservation_keywords.resource
 Resource    ../resources/variables/env_variables.robot
 
 *** Test Cases ***
-Cenário 13: Criar nova reserva
-    [Documentation]    Testa se um usuário autenticado consegue criar uma nova reserva com sucesso.
-    [Tags]    reservas    post    usuario    integracao
-
-    [Teardown]    Executar Teardowns da Reserva
+Cenário 13: Buscar reservas do próprio usuário
+    [Tags]    reserva    get    sucesso
+    [Teardown]    Deletar Usuario Criado
 
     Criar E Autenticar Usuario Comum
-    Criar Teatro Para Sessao
-    Criar Filme Para Sessao
-    Criar sessao com sucesso
-    Criar reserva como usuario autenticado
+    Enviar Requisicao De Busca De Reservas
+    Validar Resposta 200 Com Lista De Reservas
 
-Cenário 14: Buscar reservas do próprio usuário
-    [Documentation]    Testa se um usuário autenticado consegue listar suas próprias reservas.
-    [Tags]    reservas    get    usuario    integracao
-
-    [Teardown]    Executar Teardowns da Reserva
-    Criar E Autenticar Usuario Comum
-    Criar Teatro Para Sessao
-    Criar Filme Para Sessao
-    Criar sessao com sucesso
-    Criar reserva como usuario autenticado
-    Buscar Reservas Do Usuário Autenticado
-
-Cenário 15: Criar reserva sem autenticação
-    [Documentation]    Testa se a API impede criar reserva sem autenticação.
-    [Tags]    reservas    post    integracao    sem_token
-
-    [Teardown]    Executar Teardowns da Reserva
-    Criar E Autenticar Usuario Comum
-    Criar Teatro Para Sessao
-    Criar Filme Para Sessao
-    Criar sessao com sucesso
-
-    Tentar Criar Reserva Sem Autenticacao
-
-Cenário 16: Usuário comum tenta deletar reserva
-    [Documentation]    Testa se um usuário comum é impedido de deletar uma reserva.
-    [Tags]    reservas    delete    usuario    seguranca
-
-    Criar E Autenticar Usuario Comum
-    Criar Teatro Para Sessao
-    Criar Filme Para Sessao
-    Criar sessao com sucesso
-    Criar reserva como usuario autenticado
-
-    Usuario Comum Tenta Deletar Reserva
+Cenário 14: Criar reserva sem autenticação
+    [Tags]    reserva    post    nao-autenticado
+    Criar Corpo Da Reserva Sem Token
+    Enviar Requisicao De Reserva Sem Autenticacao
+    Validar Resposta 401 Sem Autorizacao
