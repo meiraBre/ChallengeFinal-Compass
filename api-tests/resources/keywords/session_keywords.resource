@@ -8,7 +8,7 @@ Criar Filme Para Sessao
     ${headers}=    Create Dictionary    Authorization=${ADMIN_TOKEN}    Content-Type=application/json
     ${dados_filme}=    Create Dictionary
     ...    title=Filme Sessão
-    ...    synopsis=Filme para criação de sessão
+    ...    synopsis=Filme para criação de sessão 01
     ...    director=Diretor Sessão
     ...    genres=["Drama"]
     ...    duration=120
@@ -29,7 +29,7 @@ Criar Teatro Para Sessao
     ...    Content-Type=application/json
 
     ${dados_teatro}=    Create Dictionary
-    ...    name=Teatro Sessão
+    ...    name=Teatro Sessão 01
     ...    capacity=120
     ...    type=standard
 

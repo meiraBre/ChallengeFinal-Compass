@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-07-02T19:04:32.126759" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\breme\OneDrive\Área de Trabalho\ChallengeFinal-Compass\ChallengeFinal-Compass\frontend-tests\tests">
+<suite id="s1-s1" name="Movies Tests" source="C:\Users\breme\OneDrive\Área de Trabalho\ChallengeFinal-Compass\ChallengeFinal-Compass\frontend-tests\tests\movies_tests.robot">
+<kw name="Abrir Navegador" owner="base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-02T19:04:32.820460" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\breme\\OneDrive\\\u00c1rea de Trabalho\\ChallengeFinal-Compass\\ChallengeFinal-Compass\\frontend-tests\\results\\browser\\traces\\temp\\fe6999e8-78c3-47c6-9410-3b0c9c79aae6"}</msg>
+<msg time="2025-07-02T19:04:32.858620" level="INFO">Starting Browser process C:\Users\breme\AppData\Roaming\Python\Python313\site-packages\Browser\wrapper\index.js using at 127.0.0.1:52788</msg>
+<msg time="2025-07-02T19:04:35.362154" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\breme\\OneDrive\\Área de Trabalho\\ChallengeFinal-Compass\\ChallengeFinal-Compass\\frontend-tests\\results\\browser\\traces\\temp\\fe6999e8-78c3-47c6-9410-3b0c9c79aae6"}</msg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-02T19:04:32.819710" elapsed="2.542705"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-02T19:04:37.179333" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002</msg>
+<msg time="2025-07-02T19:04:37.179559" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-02T19:04:35.362749" elapsed="1.817362"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:32.818927" elapsed="4.361607"/>
+</kw>
+<test id="s1-s1-t1" name="Cenário 03: Fazer uma reserva em uma sessão de um filme como usuário comum" line="12">
+<kw name="Ir Para Página De Login" owner="users_keywords">
+<kw name="Go To" owner="Browser">
+<msg time="2025-07-02T19:04:37.558301" level="INFO">Successfully opened URL http://localhost:3002/login</msg>
+<arg>${BASE_URL}/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-07-02T19:04:37.408110" elapsed="0.150406"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:37.407538" elapsed="0.151141"/>
+</kw>
+<kw name="Preencher Formulário De Login" owner="users_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:04:37.560927" level="INFO">Fills the text 'teste_qa@email.com' in the given field.</msg>
+<arg>input#email</arg>
+<arg>teste_qa@email.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:04:37.560208" elapsed="0.128409"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:04:37.689620" level="INFO">Fills the text '123456' in the given field.</msg>
+<arg>input#password</arg>
+<arg>123456</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:04:37.688910" elapsed="0.039017"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:37.559324" elapsed="0.168846"/>
+</kw>
+<kw name="Enviar Login" owner="users_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-07-02T19:04:37.730378" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:04:37.729490" elapsed="0.126906"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:37.728821" elapsed="0.127877"/>
+</kw>
+<kw name="Verificar Login Bem-Sucedido" owner="users_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-02T19:04:53.210301" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-02T19:04:53.210764" level="INFO">See also file:///C:/Users/breme/OneDrive/%C3%81rea%20de%20Trabalho/ChallengeFinal-Compass/ChallengeFinal-Compass/frontend-tests/results/playwright-log.txt for additional details.</msg>
+<msg time="2025-07-02T19:04:53.212193" level="FAIL">TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Login realizado com sucesso!') to be visible
+    - waiting for" http://localhost:3002/login" navigation to finish...
+    - navigated to "http://localhost:3002/login"
+</msg>
+<arg>text=Login realizado com sucesso!</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-07-02T19:04:37.858010" elapsed="15.487411">TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Login realizado com sucesso!') to be visible
+    - waiting for" http://localhost:3002/login" navigation to finish...
+    - navigated to "http://localhost:3002/login"
+</status>
+</kw>
+<status status="FAIL" start="2025-07-02T19:04:37.857300" elapsed="15.488536">TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Login realizado com sucesso!') to be visible
+    - waiting for" http://localhost:3002/login" navigation to finish...
+    - navigated to "http://localhost:3002/login"
+</status>
+</kw>
+<kw name="Ir para a página de filmes em cartaz" owner="movies_keywords">
+<status status="NOT RUN" start="2025-07-02T19:04:53.346640" elapsed="0.000213"/>
+</kw>
+<kw name="Selecionar o primeiro filme em cartaz" owner="movies_keywords">
+<status status="NOT RUN" start="2025-07-02T19:04:53.347188" elapsed="0.000139"/>
+</kw>
+<kw name="Selecionar Sessão Do Filme" owner="movies_keywords">
+<status status="NOT RUN" start="2025-07-02T19:04:53.347572" elapsed="0.000093"/>
+</kw>
+<kw name="Confirmar Reserva" owner="movies_keywords">
+<status status="NOT RUN" start="2025-07-02T19:04:53.347874" elapsed="0.000097"/>
+</kw>
+<kw name="Verificar Reserva Bem Sucedida" owner="movies_keywords">
+<status status="NOT RUN" start="2025-07-02T19:04:53.348166" elapsed="0.000078"/>
+</kw>
+<status status="FAIL" start="2025-07-02T19:04:37.180803" elapsed="16.167832">TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Login realizado com sucesso!') to be visible
+    - waiting for" http://localhost:3002/login" navigation to finish...
+    - navigated to "http://localhost:3002/login"
+</status>
+</test>
+<kw name="Fechar Navegador" owner="base" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-07-02T19:04:53.716050" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-02T19:04:53.363643" elapsed="0.352669"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:53.363056" elapsed="0.353460"/>
+</kw>
+<status status="FAIL" start="2025-07-02T19:04:32.209664" elapsed="21.506937"/>
+</suite>
+<suite id="s1-s2" name="Reservation Tests" source="C:\Users\breme\OneDrive\Área de Trabalho\ChallengeFinal-Compass\ChallengeFinal-Compass\frontend-tests\tests\reservation_tests.robot">
+<kw name="Abrir Navegador" owner="base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-02T19:04:53.765090" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\breme\\OneDrive\\\u00c1rea de Trabalho\\ChallengeFinal-Compass\\ChallengeFinal-Compass\\frontend-tests\\results\\browser\\traces\\temp\\9ae60ee2-452e-426d-888e-0658b5cf08db"}</msg>
+<msg time="2025-07-02T19:04:54.085346" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\breme\\OneDrive\\Área de Trabalho\\ChallengeFinal-Compass\\ChallengeFinal-Compass\\frontend-tests\\results\\browser\\traces\\temp\\9ae60ee2-452e-426d-888e-0658b5cf08db"}</msg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-02T19:04:53.763886" elapsed="0.321683"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-02T19:04:54.824616" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002</msg>
+<msg time="2025-07-02T19:04:54.824707" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-02T19:04:54.085806" elapsed="0.739051"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:53.763305" elapsed="1.061669"/>
+</kw>
+<test id="s1-s2-t1" name="Cenário 04: Verificar minhas reservas atuais" line="12">
+<kw name="Ir Para Página De Login" owner="users_keywords">
+<kw name="Go To" owner="Browser">
+<msg time="2025-07-02T19:04:55.093212" level="INFO">Successfully opened URL http://localhost:3002/login</msg>
+<arg>${BASE_URL}/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-07-02T19:04:54.995933" elapsed="0.097562"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:54.995279" elapsed="0.098379"/>
+</kw>
+<kw name="Preencher Formulário De Login" owner="users_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:04:55.096103" level="INFO">Fills the text 'teste_qa@email.com' in the given field.</msg>
+<arg>input#email</arg>
+<arg>teste_qa@email.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:04:55.095278" elapsed="0.092095"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:04:55.188576" level="INFO">Fills the text '123456' in the given field.</msg>
+<arg>input#password</arg>
+<arg>123456</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:04:55.187707" elapsed="0.020171"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:55.094584" elapsed="0.113478"/>
+</kw>
+<kw name="Enviar Login" owner="users_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-07-02T19:04:55.209872" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:04:55.209112" elapsed="0.065098"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:04:55.208465" elapsed="0.065874"/>
+</kw>
+<kw name="Verificar Login Bem-Sucedido" owner="users_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-02T19:05:10.489366" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-02T19:05:10.489622" level="INFO">See also file:///C:/Users/breme/OneDrive/%C3%81rea%20de%20Trabalho/ChallengeFinal-Compass/ChallengeFinal-Compass/frontend-tests/results/playwright-log.txt for additional details.</msg>
+<msg time="2025-07-02T19:05:10.489868" level="FAIL">TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Login realizado com sucesso!') to be visible
+    - waiting for" http://localhost:3002/login" navigation to finish...
+    - navigated to "http://localhost:3002/login"
+</msg>
+<arg>text=Login realizado com sucesso!</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-07-02T19:04:55.275591" elapsed="15.216987">TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Login realizado com sucesso!') to be visible
+    - waiting for" http://localhost:3002/login" navigation to finish...
+    - navigated to "http://localhost:3002/login"
+</status>
+</kw>
+<status status="FAIL" start="2025-07-02T19:04:55.274883" elapsed="15.217987">TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Login realizado com sucesso!') to be visible
+    - waiting for" http://localhost:3002/login" navigation to finish...
+    - navigated to "http://localhost:3002/login"
+</status>
+</kw>
+<kw name="Ir para a página de minhas reservas" owner="reservation_keywords">
+<status status="NOT RUN" start="2025-07-02T19:05:10.496812" elapsed="0.000295"/>
+</kw>
+<kw name="Verificar Lista De Reservas" owner="reservation_keywords">
+<status status="NOT RUN" start="2025-07-02T19:05:10.497523" elapsed="0.000178"/>
+</kw>
+<status status="FAIL" start="2025-07-02T19:04:54.825098" elapsed="15.673198">TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Login realizado com sucesso!') to be visible
+    - waiting for" http://localhost:3002/login" navigation to finish...
+    - navigated to "http://localhost:3002/login"
+</status>
+</test>
+<kw name="Fechar Navegador" owner="base" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-07-02T19:05:10.943911" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-02T19:05:10.506920" elapsed="0.437164"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:10.506395" elapsed="0.437791"/>
+</kw>
+<status status="FAIL" start="2025-07-02T19:04:53.744764" elapsed="17.199459"/>
+</suite>
+<suite id="s1-s3" name="Users Tests" source="C:\Users\breme\OneDrive\Área de Trabalho\ChallengeFinal-Compass\ChallengeFinal-Compass\frontend-tests\tests\users_tests.robot">
+<kw name="Abrir Navegador" owner="base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-02T19:05:10.974035" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\breme\\OneDrive\\\u00c1rea de Trabalho\\ChallengeFinal-Compass\\ChallengeFinal-Compass\\frontend-tests\\results\\browser\\traces\\temp\\b1ea3b6a-e8b4-44ca-9841-6dd1f90256a0"}</msg>
+<msg time="2025-07-02T19:05:11.284563" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\breme\\OneDrive\\Área de Trabalho\\ChallengeFinal-Compass\\ChallengeFinal-Compass\\frontend-tests\\results\\browser\\traces\\temp\\b1ea3b6a-e8b4-44ca-9841-6dd1f90256a0"}</msg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-02T19:05:10.973225" elapsed="0.311696"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-02T19:05:12.042532" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002</msg>
+<msg time="2025-07-02T19:05:12.042634" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-02T19:05:11.285181" elapsed="0.757633"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:10.972920" elapsed="1.070058"/>
+</kw>
+<test id="s1-s3-t1" name="Cenário 01: Fazer um cadastro de um usuário comum" line="11">
+<kw name="Ir Para Página De Cadastro" owner="users_keywords">
+<kw name="Go To" owner="Browser">
+<msg time="2025-07-02T19:05:12.239667" level="INFO">Successfully opened URL http://localhost:3002/register</msg>
+<arg>${BASE_URL}/register</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-07-02T19:05:12.091839" elapsed="0.148234"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:12.090910" elapsed="0.149409"/>
+</kw>
+<kw name="Preencher Formulário De Cadastro" owner="users_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:05:12.242922" level="INFO">Fills the text 'Usuário Teste' in the given field.</msg>
+<arg>input#name</arg>
+<arg>Usuário Teste</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:05:12.241955" elapsed="0.099344"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:05:12.342891" level="INFO">Fills the text 'teste_qa@email.com' in the given field.</msg>
+<arg>input#email</arg>
+<arg>teste_qa@email.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:05:12.341951" elapsed="0.021299"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:05:12.364127" level="INFO">Fills the text '123456' in the given field.</msg>
+<arg>input#password</arg>
+<arg>123456</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:05:12.363512" elapsed="0.020275"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:05:12.384708" level="INFO">Fills the text '123456' in the given field.</msg>
+<arg>input#confirmPassword</arg>
+<arg>123456</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:05:12.384060" elapsed="0.017052"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:12.241044" elapsed="0.160306"/>
+</kw>
+<kw name="Enviar Cadastro" owner="users_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-07-02T19:05:12.403159" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:05:12.402357" elapsed="0.066447"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:12.401788" elapsed="0.067200"/>
+</kw>
+<kw name="Verificar Mensagem De Sucesso" owner="users_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-02T19:05:12.821538" level="INFO">Waited for Element with selector text=Conta criada com sucesso! at state visible</msg>
+<arg>text=Conta criada com sucesso!</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-02T19:05:12.470121" elapsed="0.351821"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:12.469586" elapsed="0.352624"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:12.043111" elapsed="0.779638"/>
+</test>
+<test id="s1-s3-t2" name="Cenário 02: Realizar o login desse usuário" line="17">
+<kw name="Ir Para Página De Login" owner="users_keywords">
+<kw name="Go To" owner="Browser">
+<msg time="2025-07-02T19:05:13.005887" level="INFO">Successfully opened URL http://localhost:3002/login</msg>
+<arg>${BASE_URL}/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-07-02T19:05:12.923126" elapsed="0.083018"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:12.922499" elapsed="0.083771"/>
+</kw>
+<kw name="Preencher Formulário De Login" owner="users_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:05:13.008922" level="INFO">Fills the text 'teste_qa@email.com' in the given field.</msg>
+<arg>input#email</arg>
+<arg>teste_qa@email.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:05:13.007685" elapsed="0.038489"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-02T19:05:13.047725" level="INFO">Fills the text '123456' in the given field.</msg>
+<arg>input#password</arg>
+<arg>123456</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:05:13.046483" elapsed="0.026966"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:13.006830" elapsed="0.066791"/>
+</kw>
+<kw name="Enviar Login" owner="users_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-07-02T19:05:13.075724" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-02T19:05:13.074557" elapsed="0.085326"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:13.074059" elapsed="0.086182"/>
+</kw>
+<kw name="Verificar Login Bem-Sucedido" owner="users_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-02T19:05:13.394427" level="INFO">Waited for Element with selector text=Login realizado com sucesso! at state visible</msg>
+<arg>text=Login realizado com sucesso!</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-02T19:05:13.162346" elapsed="0.232355"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:13.161253" elapsed="0.233624"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:12.899143" elapsed="0.496327"/>
+</test>
+<kw name="Fechar Navegador" owner="base" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-07-02T19:05:13.719821" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-02T19:05:13.422502" elapsed="0.297557"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:13.421797" elapsed="0.298402"/>
+</kw>
+<status status="PASS" start="2025-07-02T19:05:10.968342" elapsed="2.751896"/>
+</suite>
+<status status="FAIL" start="2025-07-02T19:04:32.130847" elapsed="41.616369"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="2" skip="0">Tests</stat>
+<stat name="Movies Tests" id="s1-s1" pass="0" fail="1" skip="0">Tests.Movies Tests</stat>
+<stat name="Reservation Tests" id="s1-s2" pass="0" fail="1" skip="0">Tests.Reservation Tests</stat>
+<stat name="Users Tests" id="s1-s3" pass="2" fail="0" skip="0">Tests.Users Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-02T19:04:32.082547" level="WARN">Error in file 'C:\Users\breme\OneDrive\Área de Trabalho\ChallengeFinal-Compass\ChallengeFinal-Compass\frontend-tests\tests\movies_tests.robot' on line 11: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2025-07-02T19:04:32.097187" level="WARN">Error in file 'C:\Users\breme\OneDrive\Área de Trabalho\ChallengeFinal-Compass\ChallengeFinal-Compass\frontend-tests\tests\reservation_tests.robot' on line 11: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2025-07-02T19:04:32.117477" level="WARN">Error in file 'C:\Users\breme\OneDrive\Área de Trabalho\ChallengeFinal-Compass\ChallengeFinal-Compass\frontend-tests\tests\users_tests.robot' on line 10: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+</errors>
+</robot>

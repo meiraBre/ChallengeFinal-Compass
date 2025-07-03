@@ -43,11 +43,11 @@
 ▫️Refinamento do planejamento de testes (melhoria da explicação de cobertura de testes)
 ▫️Refinamento dos códigos para aproveitamento e reutilização como uma boa práticas
 
-Cheklist dia 02-07-2025
+02-07-2025
 ▫️Realizar os testes automatizados de front-end
 ▫️Fazer os reports de bugs no Jira
 ▫️Rever os critérios de avaliação - learning
 ▫️Acrescentar as novas informações dos endpoints no mapa mental
-▫️Fazer a implementação de CI/CD
+
 
 

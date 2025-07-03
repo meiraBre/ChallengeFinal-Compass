@@ -1,52 +1,48 @@
 *** Settings ***
 Library    RequestsLibrary
 
+*** variables ***
+${ENDPOINT_RESERVAS}    /reservations/me
+${ID_SESSAO_VALIDO}=    6865ac675acb3c4ada24ab4f
+${ENDPOINT_RESERVA}      /api/v1/reservations
 
 *** Keywords ***
-Criar reserva como usuario autenticado
-    ${headers}=    Create Dictionary    Authorization=${TOKEN_USUARIO}
-    ${seat}=    Create Dictionary    row=B    number=3    type=full
-    ${seats}=    Create List    ${seat}
-
-    ${dados_reserva}=    Create Dictionary
-    ...    session=${ID_SESSAO_CRIADA}
-    ...    seats=${seats}
-    ...    paymentMethod=credit_card
-
+Enviar Requisicao De Busca De Reservas
     Create Session    reserva    ${BASE_URL}
-    ${res}=    POST On Session    reserva    /reservations    headers=${headers}    json=${dados_reserva}
-    Status Should Be    201    ${res}
-    ${id_reserva}=    Set Variable    ${res.json()['data']['_id']}
-    Set Suite Variable    ${ID_RESERVA_CRIADA}    ${id_reserva}
-    Log    Reserva criada com sucesso
-
-Buscar Reservas Do Usuário Autenticado
-    [Documentation]    Realiza GET em /reservations/me e retorna reservas do usuário autenticado.
-
     ${headers}=    Create Dictionary    Authorization=${TOKEN_USUARIO}
-    Create Session    reservas_usuario    ${BASE_URL}
-    ${res}=    GET On Session    reservas_usuario    /reservations/me    headers=${headers}
-    Status Should Be    200    ${res}
-    Log    ✔️ Reservas do usuário listadas com sucesso
-    Set Suite Variable    ${RESERVAS_USUARIO}    ${res.json()}
+    ${resposta}=    GET On Session
+    ...    reserva
+    ...    ${ENDPOINT_RESERVAS}
+    ...    headers=${headers}
+    Set Test Variable    ${RESPOSTA_RESERVAS}    ${resposta}
 
-Tentar Criar Reserva Sem Autenticacao
-    ${dados_reserva}=    Create Dictionary
-    ...    session=${ID_SESSAO_CRIADA}
-    ...    seats=[{"row": "B", "number": 4, "type": "full"}]
+Validar Resposta 200 Com Lista De Reservas
+    Should Be Equal As Integers    ${RESPOSTA_RESERVAS.status_code}    200
+    Should Be True    ${RESPOSTA_RESERVAS.json()['success']}
+    Log    Total de reservas encontradas: ${RESPOSTA_RESERVAS.json()['count']}
+
+Criar Corpo Da Reserva Sem Token
+    ${assento1}=    Create Dictionary    row=D    number=1    type=full
+    ${assento2}=    Create Dictionary    row=D    number=2    type=half
+    ${seats}=       Create List    ${assento1}    ${assento2}
+    ${corpo}=       Create Dictionary
+    ...    session=${ID_SESSAO_VALIDO}
     ...    paymentMethod=credit_card
+    ...    seats=${seats}
+    Set Test Variable    ${CORPO_RESERVA}    ${corpo}
 
+Enviar Requisicao De Reserva Sem Autenticacao
     Create Session    reserva_sem_token    ${BASE_URL}
-    ${res}=    POST On Session    reserva_sem_token    /reservations    json=${dados_reserva}    expected_status=ANY
-    Status Should Be    401    ${res}
-    Log    ✔️ A API bloqueou corretamente a tentativa de reserva sem autenticação (401)
+    ${resposta}=    POST On Session
+    ...    reserva_sem_token
+    ...    ${ENDPOINT_RESERVA}
+    ...    json=${CORPO_RESERVA}
+    Set Test Variable    ${RESPOSTA_RESERVA}    ${resposta}
 
-Usuario Comum Tenta Deletar Reserva
-    ${headers}=    Create Dictionary    Authorization=${TOKEN_USUARIO}
+Validar Resposta 401 Sem Autorizacao
+    Should Be Equal As Integers    ${RESPOSTA_RESERVA.status_code}    401
+    Should Be True    "${RESPOSTA_RESERVA.json()['success']}" == "false"
+    Log    Mensagem recebida: ${RESPOSTA_RESERVA.json()['message']}
 
-    Create Session    tentativa_delete    ${BASE_URL}
-    ${res}=    DELETE On Session    tentativa_delete    /reservations/${ID_RESERVA_CRIADA}    headers=${headers}    expected_status=ANY
 
-    Status Should Be    403    ${res}
-    Log    ✔️ Usuário comum não tem permissão para deletar reservas (403)
 
