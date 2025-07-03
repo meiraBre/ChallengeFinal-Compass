@@ -1,0 +1,34 @@
+name: Testes com Robot
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar Python e bibliotecas
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+
+      - name: Rodar testes
+        run: |
+          robot -d results tests/
+
+      - name: Salvar relatórios
+        uses: actions/upload-artifact@v3
+        with:
+          name: Relatorios
+          path: results
