@@ -87,22 +87,19 @@ Este repositório contém a entrega completa do Challenge Final do meu estágio 
 
 ## 🤖 Testes Automatizados (Robot Framework)
 
-> Estrutura de automação organizada por suíte (API e Front-End)
+Estrutura de automação organizada por suíte (API e Front-End):
 
-📁 **Estrutura do Projeto**
+```bash
+📁 Estrutura do Projeto
 ├── .github/
 │   └── workflows/
-│       └── ci-tests.yml              # Pipeline de CI para execução dos testes
-│
-├── .venv/                            # Ambiente virtual Python
+│       └── ci-tests.yml               # Pipeline de CI para execução dos testes
+├── .venv/                             # Ambiente virtual Python
 │   ├── Include/
 │   ├── Lib/
 │   ├── Scripts/
-│   ├── pyvenv.cfg
-│   └── .gitignore
-│
-├── .vscode/                          # Configurações do VS Code
-│
+│   └── pyvenv.cfg
+├── .vscode/                           # Configurações do VS Code
 ├── api-tests/
 │   ├── resources/
 │   │   ├── keywords/
@@ -116,34 +113,29 @@ Este repositório contém a entrega completa do Challenge Final do meu estágio 
 │   │   │   └── users_admin_keywords.resource
 │   │   └── variables/
 │   │       └── env_variables.robot
-│   │
-│   ├── results/                      # Relatórios gerados após execução
-│
-│   ├── tests/                        # Casos de teste automatizados (API)
+│   ├── results/                       # Relatórios gerados após execução
+│   ├── tests/                         # Casos de teste automatizados (API)
 │   │   ├── auth_tests.robot
 │   │   ├── movie_tests.robot
 │   │   ├── reservation_tests.robot
 │   │   ├── session_tests.robot
 │   │   ├── theater_tests.robot
 │   │   └── users_admin_tests.robot
-│
-│   ├── robot_tests_suite.robot       # Arquivo mestre que chama as suítes
+│   ├── robot_tests_suite.robot        # Arquivo mestre que chama as suítes
 │   ├── .gitignore
-│   └── requirements.txt              # Dependências do projeto
-│
+│   └── requirements.txt               # Dependências do projeto
 ├── frontend-tests/
 │   ├── resources/
 │   ├── results/
 │   ├── tests/
-│   └── tests_suite_front.robot       # Suite principal de testes do Front-End
-│
-├── docs/                             # Documentação e materiais de apoio
+│   └── tests_suite_front.robot        # Suite principal de testes do Front-End
+├── docs/                              # Documentação e materiais de apoio
 │   ├── API_postman_REFINAMENTO.pdf
 │   ├── Cinema App API - Mapa Mental.pdf
 │   └── REST API basics.postman_collection.json
-│
-└── preparation/                      # Pasta para anotações, rascunhos e preparação
+└── preparation/                       # Pasta para anotações, rascunhos e preparação
 
+```
 
 🗂️ Organização e Reporte no Jira
 Todos os bugs, falhas e melhorias foram reportados e rastreados via Jira.
